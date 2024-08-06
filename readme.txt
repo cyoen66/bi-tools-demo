@@ -1,0 +1,1 @@
+https://docs.kanaries.net/ja/pygwalker/api-reference/streamlit
