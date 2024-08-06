@@ -13,7 +13,7 @@ st.title('YFC 汎用分析')
 update_file = st.file_uploader("分析用CSVファイルをアップロードしてください"
                                , type=['csv']
                                ,help="ファイルをアップロードしてください")
-df = pd.read_csv('../MCCMBI.csv')
+df = pd.read_csv('MCCMBI.csv')
 
 # 显示下载按钮
 csv = df.to_csv(index=False).encode('utf-8')
@@ -30,7 +30,7 @@ def get_pyg_renderer() -> "StreamlitRenderer":
     df['売上数'] = df['売上数'].fillna(0)
     #return StreamlitRenderer(df,spec="./demo1.json", spec_io_mode="rw")
     #sepc_io_mode="r"で読み込み専用
-    return StreamlitRenderer(df,spec="./demo2.json", spec_io_mode="rw")
+    return StreamlitRenderer(df,spec="demo2.json", spec_io_mode="rw")
 
     #return StreamlitRenderer(df, spec_io_mode="rw")
 
