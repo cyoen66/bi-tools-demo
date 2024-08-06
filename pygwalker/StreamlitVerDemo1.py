@@ -22,7 +22,7 @@ option1 = st.selectbox(
 
 @st.cache_resource
 def get_pyg_renderer() -> "StreamlitRenderer":
-    df = pd.read_csv('../MCCMBI.csv')
+    df = pd.read_csv('MCCMBI.csv')
     return StreamlitRenderer(df,spec="./demo1.json", spec_io_mode="rw")
     #return StreamlitRenderer(df, spec_io_mode="rw")
 
